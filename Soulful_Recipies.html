@@ -32,21 +32,34 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Soulful Bites</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i data-feather="menu"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#cultural-plate">Cultural Plate</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Healthy Alternatives</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#eat-local">Eat Local</a></li>
-          <li class="nav-item"><a class="nav-link" href="SubmitRecipe.html">Learn & Share</a></li>
-        </ul>
-      </div>
+        <a class="navbar-brand fw-bold" href="index.html">Soulful Bites</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cultural-plate">Cultural Plate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#healthy-alternatives">Healthy Alternatives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Soulful_Recipies.html">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#eat-local">Eat Local</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SubmitRecipeForm.html">Learn & Share</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <!-- Page hero -->
   <header class="soft-bg py-5">
@@ -224,26 +237,107 @@
   <script>feather.replace();</script>
 
   <!-- Footer subscribe JS -->
-  <script>
-    (function () {
-      const form   = document.getElementById('subscribe-form');
-      const email  = document.getElementById('subscribe-email');
-      const button = document.getElementById('subscribe-btn');
-      const status = document.getElementById('subscribe-status');
+<!-- Form Scripts -->
+<script>
+  // Recipe Form Handler
+  (function () {
+    const form = document.getElementById('recipe-form');
+    const button = document.getElementById('recipe-submit-btn');
+    const status = document.getElementById('recipe-form-status');
 
-      function setStatus(m, ok){ status.textContent = m; status.classList.remove('text-danger','text-success'); status.classList.add(ok?'text-success':'text-danger'); }
+    if (!form || !button || !status) {
+      console.error('Recipe form elements not found');
+      return;
+    }
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (!email.value.trim()) { setStatus('Please enter a valid email.', false); email.focus(); return; }
-        const data = new FormData(form);
-        data.append('source','Recipes Footer');
-        button.disabled = true; setStatus('Submitting…', true);
-        try { await fetch(form.action, { method:'POST', body:data, mode:'no-cors' }); form.reset(); setStatus('Thanks! You are subscribed.', true); }
-        catch { setStatus('Sorry—try again.', false); }
-        finally { button.disabled = false; }
-      });
-    })();
-  </script>
+    function setStatus(msg, ok) {
+      status.textContent = msg;
+      status.classList.remove('text-danger', 'text-success');
+      status.classList.add(ok ? 'text-success' : 'text-danger');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const data = new FormData(form);
+      data.append('source', 'SubmitRecipe Page');
+      button.disabled = true;
+      setStatus('Submitting your recipe...', true);
+
+      try {
+        await fetch(form.action, { 
+          method: 'POST', 
+          body: data, 
+          mode: 'no-cors' 
+        });
+        form.reset();
+        setStatus('Thank you! Your recipe has been submitted.', true);
+        
+        setTimeout(() => {
+          setStatus('', true);
+        }, 5000);
+      } catch (err) {
+        console.error('Recipe submission error:', err);
+        setStatus('Submission failed. Please try again.', false);
+      } finally {
+        button.disabled = false;
+      }
+    });
+  })();
+
+  // Newsletter Subscribe Form Handler
+  (function () {
+    const form = document.getElementById('subscribe-form');
+    const email = document.getElementById('subscribe-email');
+    const button = document.getElementById('subscribe-btn');
+    const status = document.getElementById('subscribe-status');
+
+    if (!form || !email || !button || !status) {
+      console.error('Subscribe form elements not found');
+      return;
+    }
+
+    function setStatus(message, ok) {
+      status.textContent = message;
+      status.classList.remove('text-danger', 'text-success');
+      status.classList.add(ok ? 'text-success' : 'text-danger');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (!email.value.trim()) {
+        setStatus('Please enter a valid email address.', false);
+        return;
+      }
+      
+      const data = new FormData();
+      data.append('Email', email.value.trim());
+      data.append('source', 'Footer Signup');
+      button.disabled = true;
+      setStatus('Submitting...', true);
+
+      try {
+        await fetch(form.action, { 
+          method: 'POST', 
+          body: data, 
+          mode: 'no-cors'
+        });
+        
+        form.reset();
+        setStatus('Thank you! You have been subscribed.', true);
+        
+        setTimeout(() => {
+          setStatus('', true);
+        }, 5000);
+      } catch (err) {
+        console.error('Subscribe error:', err);
+        setStatus('Error submitting form. Please try again.', false);
+      } finally {
+        button.disabled = false;
+      }
+    });
+  })();
+</script>
 </body>
 </html>
