@@ -4,7 +4,7 @@
 ### Using Bootrap to build a responsive website
 
 
-[Link to my page](https://edwardsalame711.github.io/Lab-Engagement-8/)
+## [Link to my page](https://edwardsalame711.github.io/Lab-Engagement-8/)
 
 
 
