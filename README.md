@@ -6,8 +6,8 @@
 
 ## [Link to my page](https://edwardsalame711.github.io/Lab-Engagement-8/)
 
-## FIGMA Link:
-## [Link to FIGMA](https://edwardsalame711.github.io/Lab-Engagement-8/](https://www.figma.com/design/Yq0IgOvoVPSuQbHxzC28zZ/Soulful-Bites?node-id=0-1&p=f&t=YyPqMGLDHU8ojo05-0)
+
+## [Link to FIGMA](https://www.figma.com/design/Yq0IgOvoVPSuQbHxzC28zZ/Soulful-Bites?node-id=0-1&p=f&t=YyPqMGLDHU8ojo05-0)
 
 # Site Narrative Final - Healthy Cultural Soul Food Options: Vegan vs. Carnivore Diets
 
