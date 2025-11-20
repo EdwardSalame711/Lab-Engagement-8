@@ -9,10 +9,12 @@
 
 ## [Link to FIGMA](https://www.figma.com/design/Yq0IgOvoVPSuQbHxzC28zZ/Soulful-Bites?node-id=0-1&p=f&t=YyPqMGLDHU8ojo05-0)
 
+## [Link to Google Sheet - RECIPE Form Capture](https://docs.google.com/spreadsheets/d/1hW1eNV_W7aptTxvw0lACir37Y5QbXkjJ8qJBjpJAZns/edit?gid=0#gid=0)
+
+## [Link to Google Sheet - SUBSCRIBE Capture](https://docs.google.com/spreadsheets/d/1TiP03cMOZFSCbrApVbGngjpiFa00zLfVWdDGLdFy_sc/edit?gid=0#gid=0)
+
+
 # Site Narrative Final - Healthy Cultural Soul Food Options: Vegan vs. Carnivore Diets
-
-
-
 
 ## Promotes food awareness and community health, has a strong and educational purpose, and provides actionable steps (recipes, restaurant guides, and lifestyle comparisons).
 
