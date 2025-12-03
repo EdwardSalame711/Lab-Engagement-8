@@ -63,10 +63,8 @@
 ##### •	User-generated stories on health transformations through cultural food awareness.
 ##### •	Links to external wellness resources and healthy cooking workshops.
 
-Lighthouse Test
+# Lighthouse Test
 
- 
 <img width="468" height="628" alt="image" src="https://github.com/user-attachments/assets/02607253-7313-4bef-ab9f-964cc1447fea" />
 
 
-<img width="468" height="639" alt="image" src="https://github.com/user-attachments/assets/909478d3-63e2-48ee-83fb-ce26b857e65c" />
