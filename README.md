@@ -65,5 +65,7 @@
 
 # Lighthouse Test
 
-<img width="800" height="1040" alt="image" src="https://github.com/user-attachments/assets/e4112061-41eb-4d7d-99a2-6ba9b2558e48" />
+
+<img width="800" height="1040" alt="image" src="https://github.com/user-attachments/assets/5766cfbd-fc93-4c4e-95cb-25909748ad70" />
+
 
