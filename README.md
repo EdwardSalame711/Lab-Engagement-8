@@ -6,6 +6,7 @@
 
 ## [Link to my page](https://edwardsalame711.github.io/Lab-Engagement-8/)
 
+## [Link to POWER POINT](https://docs.google.com/presentation/d/1o0Px5bRksj4w7KLsj8Twvwr2ETzQnjkXd17XJr9ZdVw/edit?slide=id.g3914f078d5c_0_731#slide=id.g3914f078d5c_0_731)
 
 ## [Link to FIGMA](https://www.figma.com/design/Yq0IgOvoVPSuQbHxzC28zZ/Soulful-Bites?node-id=0-1&p=f&t=YyPqMGLDHU8ojo05-0)
 
